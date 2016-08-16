@@ -9,6 +9,7 @@ body {
 }
 
 header {
+  font-family: arial;
   font-size: 1.2em;
   text-align: center;
   background-color: #000;
