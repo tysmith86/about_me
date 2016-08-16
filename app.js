@@ -1,9 +1,10 @@
 'use strict';
 
-var totalCorrect = 0;
+var totalCorrect = 0; // Used for a running tally of correct answers
 
 var userName = prompt('What is your name?');
 console.log('The user\'s name is ', userName);
+
 var isReady = prompt('Welcome ' + userName + ', are you ready to take the quiz?').toLowerCase();
 console.log('Is the user ready?', isReady.toUpperCase());
 
