@@ -1,6 +1,20 @@
 'use strict';
 
 var totalCorrect = 0;
+
+var userName = prompt('What is your name?');
+console.log('The user\'s name is ', userName);
+var isReady = prompt('Welcome ' + userName + ', are you ready to take the quiz?').toLowerCase();
+console.log('Is the user ready?', isReady.toUpperCase());
+
+if (isReady === 'yes' || isReady === 'y') {
+  alert('Good luck!');
+} else if (isReady === 'no' || isReady === 'n') {
+  alert('That\'s too bad, you don\'t really have a choice!');
+} else {
+  alert('Well, that doesn\'t answer the question, so we\'ll just go ahead and start.');
+}
+
 var videoGameQA = prompt('Do I play video games?').toLowerCase();
 console.log('videoGameQA =', videoGameQA);
 
