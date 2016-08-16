@@ -1,0 +1,22 @@
+body {
+  background-color: gray;
+}
+
+.container {
+  width: 65%;
+  margin: 0 auto;
+  display: inline;
+}
+
+header {
+  font-size: 1.2em;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+section {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
