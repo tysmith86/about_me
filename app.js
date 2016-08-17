@@ -91,6 +91,61 @@ if (windowsQA == 'no' || windowsQA === 'n') {
   alert('That doesn\'t really answer the question.');
 }
 
+var numSiblings = 3;
+
+for (var i = 4; i >= 1 && siblingsQA != numSiblings; i--) {
+  var siblingsQA = Number(prompt('How many siblings do I have? You have ' + i + ' guesses to get it right!'));
+  console.log('SiblingsQA = ', siblingsQA);
+  if (siblingsQA === numSiblings) {
+    totalCorrect++;
+    console.log('The user answered correctly.');
+    alert('That\'s right! I have two brothers and one sister.');
+  } else if (siblingsQA < numSiblings) {
+    alert('Too low!');
+  } else if (siblingsQA > numSiblings) {
+    alert('Too high!');
+  }
+}
+
+var carColors = ['red', 'green', 'gray', 'grey', 'silver', 'blue'];
+var possibleAnswers = carColors.length - 1; // subtracted 1 due to giving two spellings of grey
+
+var guesses = 7;
+var numCorrect = 0;
+
+do {
+  guesses--;
+  var carColorsQA = prompt('Of all the vehicles I owned, name 3 of their colors. There are ' + possibleAnswers + ' possible answers. You have ' + guesses + ' guesses.');
+  console.log('carColorsQA = ', carColorsQA);
+  if (carColorsQA == carColors[0]) {
+    numCorrect++;
+    alert('My first vehicle was a red Toyota Pickup!');
+  } else if (carColorsQA == carColors[1]) {
+    numCorrect++;
+    alert('I used to own a green Dodge Dakota.');
+  } else if (carColorsQA == carColors[2]) {
+    numCorrect++;
+    alert('One of the favorite cars I used to own was a grey Mustang GT!');
+  } else if (carColorsQA == carColors[3]) {
+    numCorrect++;
+    alert('One of the favorite cars I used to own was a grey Mustang GT!');
+  } else if (carColorsQA == carColors[4]) {
+    numCorrect++;
+    alert('The last car I owned was a silver Honda Civic.');
+  } else if (carColorsQA == carColors[5]) {
+    numCorrect++;
+    alert('I currently own a blue Honda Civic.');
+  } else {
+    alert('I never owned a ' + carColorsQA + ' vehicle.');
+  }
+} while (guesses > 1 && numCorrect != 3);
+
+alert('The correct answers are ', carColors[0], carColors[1], carColors[3], carColors[4], carColors[5]);
+
+if (numCorrect == 3) { // The user only gets a point for correctly guessing 3 car colors
+  totalCorrect++;
+}
+
 console.log('totalCorrect =', totalCorrect);
 
 alert('You answered ' + totalCorrect + ' questions correctly.');
