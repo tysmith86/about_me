@@ -157,8 +157,20 @@ console.log('totalCorrect =', totalCorrect);
 
 alert('You answered ' + totalCorrect + ' questions correctly.');
 
+var randomNum = Math.floor(Math.random() * 11);
+console.log('randomNum = ', randomNum);
+
+
+
 if (totalCorrect >= 6) {
-  alert('You really know me!');
+  alert('You really know me! BONUS ROUND!');
+  var userGuess = prompt('Between 0 and 10, what number am I thinking of?');
+  console.log('userGuess = ', userGuess);
+  if (userGuess == randomNum) {
+    alert('Congratulations...for randomly guessing an arbitrary number.');
+  } else {
+    alert('Another one wrong...tsk tsk tsk.');
+  }
 } else if (totalCorrect > 3) {
   alert('Not too bad.');
 } else {
