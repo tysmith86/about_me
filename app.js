@@ -169,7 +169,7 @@ if (totalCorrect >= 6) {
   if (userGuess == randomNum) {
     alert('Congratulations...for randomly guessing an arbitrary number.');
   } else {
-    alert('Another one wrong...tsk tsk tsk.');
+    alert('Is that your final answer? Just kidding, you only get 1 guess...WRONG!.');
   }
 } else if (totalCorrect > 3) {
   alert('Not too bad.');
