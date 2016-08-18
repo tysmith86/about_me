@@ -1,23 +1,51 @@
-body {
-  background-color: gray;
-}
-
-.container {
-  width: 65%;
-  margin: 0 auto;
-  display: inline;
-}
-
 header {
-  font-family: arial;
-  font-size: 1.2em;
+  width: 90%;
+  margin: 0 auto;
   text-align: center;
-  background-color: #000;
-  color: #fff;
+  background-color: #423e71;
+  border: 10px outset #568370;
+  font-size: 1.5em;
 }
 
 section {
+  width: 55%;
+  height: 50%;
+  margin: 5px auto;
   text-align: center;
-  font-size: 1.2em;
-  font-weight: bold;
+  background-color: #423e71;
+  border: 10px outset #568370;
+  font-size: 1.5em;
+}
+
+p {
+  margin-top: 20px;
+  padding: 5px 20px;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+ol {
+  margin: 5px auto;
+  list-style-position: inside;
+  width: 50%;
+  text-align: left;
+}
+
+ul {
+  margin: 5px auto;
+  list-style-position: inside;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 0px;
+}
+
+ul li {
+  display: inline;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  padding: 0px 3px;
 }

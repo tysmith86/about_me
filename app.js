@@ -51,7 +51,7 @@ console.log('codingQA =', codingQA);
 
 if (codingQA === 'yes' || codingQA === 'y') {
   console.log('The user answered this correctly.');
-  alert('I would say congratulations on getting this correct, but that should be pretty obvious.');
+  alert('I would congratulate you on getting this correct, but that should be pretty obvious.');
   totalCorrect++;
 } else if (codingQA === 'no' || codingQA === 'n') {
   console.log('The user answered this incorrectly.');
@@ -91,13 +91,87 @@ if (windowsQA == 'no' || windowsQA === 'n') {
   alert('That doesn\'t really answer the question.');
 }
 
+var numSiblings = 3;
+
+for (var i = 4; i >= 1 && siblingsQA != numSiblings; i--) {
+  var siblingsQA = Number(prompt('How many siblings do I have? You have ' + i + ' guesses to get it right!'));
+  console.log('SiblingsQA = ', siblingsQA);
+  if (siblingsQA === numSiblings) {
+    totalCorrect++;
+    console.log('The user answered correctly.');
+    alert('That\'s right! I have two brothers and one sister.');
+  } else if (siblingsQA < numSiblings) {
+    alert('Too low!');
+  } else if (siblingsQA > numSiblings) {
+    alert('Too high!');
+  }
+}
+
+var carColors = ['red', 'green', 'gray', 'grey', 'silver', 'blue'];
+var possibleAnswers = carColors.length - 1; // subtracted 1 due to giving two spellings of grey
+
+var guesses = 7;
+var numCorrect = 0;
+
+do {
+  guesses--;
+  var carColorsQA = prompt('Of all the vehicles I owned, name 3 of their colors. There are ' + possibleAnswers + ' possible answers. You have ' + guesses + ' guesses.').toLowerCase();
+  console.log('carColorsQA = ', carColorsQA);
+  if (carColorsQA == carColors[0]) {
+    numCorrect++;
+    console.log('numCorrect = ', numCorrect);
+    alert('My first vehicle was a red Toyota Pickup!');
+  } else if (carColorsQA == carColors[1]) {
+    numCorrect++;
+    console.log('numCorrect = ', numCorrect);
+    alert('I used to own a green Dodge Dakota.');
+  } else if (carColorsQA == carColors[2]) {
+    numCorrect++;
+    console.log('numCorrect = ', numCorrect);
+    alert('One of the favorite cars I used to own was a grey Mustang GT!');
+  } else if (carColorsQA == carColors[3]) {
+    numCorrect++;
+    console.log('numCorrect = ', numCorrect);
+    alert('One of the favorite cars I used to own was a grey Mustang GT!');
+  } else if (carColorsQA == carColors[4]) {
+    numCorrect++;
+    console.log('numCorrect = ', numCorrect);
+    alert('The last car I owned was a silver Honda Civic.');
+  } else if (carColorsQA == carColors[5]) {
+    numCorrect++;
+    console.log('numCorrect = ', numCorrect);
+    alert('I currently own a blue Honda Civic.');
+  } else {
+    alert('I never owned a ' + carColorsQA + ' vehicle.');
+  }
+} while (guesses > 1 && numCorrect != 3);
+
+alert('The correct answers are ' + carColors[0] + ', ' + carColors[1] + ', ' + carColors[3] + ', ' + carColors[4] + ', and ' + carColors[5] + '.');
+
+if (numCorrect == 3) { // The user only gets a point for correctly guessing 3 car colors
+  alert('Great job!');
+  totalCorrect++;
+}
+
 console.log('totalCorrect =', totalCorrect);
 
 alert('You answered ' + totalCorrect + ' questions correctly.');
 
-if (totalCorrect >= 4) {
-  alert('You really know me!');
-} else if (totalCorrect === 3) {
+var randomNum = Math.floor(Math.random() * 11);
+console.log('randomNum = ', randomNum);
+
+
+
+if (totalCorrect >= 6) {
+  alert('You really know me! BONUS ROUND!');
+  var userGuess = prompt('Between 0 and 10, what number am I thinking of?');
+  console.log('userGuess = ', userGuess);
+  if (userGuess == randomNum) {
+    alert('Congratulations...for randomly guessing an arbitrary number.');
+  } else {
+    alert('Another one wrong...tsk tsk tsk.');
+  }
+} else if (totalCorrect > 3) {
   alert('Not too bad.');
 } else {
   alert('You don\'t know me very well, do you?');
