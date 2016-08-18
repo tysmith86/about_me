@@ -51,7 +51,7 @@ console.log('codingQA =', codingQA);
 
 if (codingQA === 'yes' || codingQA === 'y') {
   console.log('The user answered this correctly.');
-  alert('I would say congratulations on getting this correct, but that should be pretty obvious.');
+  alert('I would congratulate you on getting this correct, but that should be pretty obvious.');
   totalCorrect++;
 } else if (codingQA === 'no' || codingQA === 'n') {
   console.log('The user answered this incorrectly.');
@@ -115,34 +115,41 @@ var numCorrect = 0;
 
 do {
   guesses--;
-  var carColorsQA = prompt('Of all the vehicles I owned, name 3 of their colors. There are ' + possibleAnswers + ' possible answers. You have ' + guesses + ' guesses.');
+  var carColorsQA = prompt('Of all the vehicles I owned, name 3 of their colors. There are ' + possibleAnswers + ' possible answers. You have ' + guesses + ' guesses.').toLowerCase();
   console.log('carColorsQA = ', carColorsQA);
   if (carColorsQA == carColors[0]) {
     numCorrect++;
+    console.log('numCorrect = ', numCorrect);
     alert('My first vehicle was a red Toyota Pickup!');
   } else if (carColorsQA == carColors[1]) {
     numCorrect++;
+    console.log('numCorrect = ', numCorrect);
     alert('I used to own a green Dodge Dakota.');
   } else if (carColorsQA == carColors[2]) {
     numCorrect++;
+    console.log('numCorrect = ', numCorrect);
     alert('One of the favorite cars I used to own was a grey Mustang GT!');
   } else if (carColorsQA == carColors[3]) {
     numCorrect++;
+    console.log('numCorrect = ', numCorrect);
     alert('One of the favorite cars I used to own was a grey Mustang GT!');
   } else if (carColorsQA == carColors[4]) {
     numCorrect++;
+    console.log('numCorrect = ', numCorrect);
     alert('The last car I owned was a silver Honda Civic.');
   } else if (carColorsQA == carColors[5]) {
     numCorrect++;
+    console.log('numCorrect = ', numCorrect);
     alert('I currently own a blue Honda Civic.');
   } else {
     alert('I never owned a ' + carColorsQA + ' vehicle.');
   }
 } while (guesses > 1 && numCorrect != 3);
 
-alert('The correct answers are ', carColors[0], carColors[1], carColors[3], carColors[4], carColors[5]);
+alert('The correct answers are ' + carColors[0] + ', ' + carColors[1] + ', ' + carColors[3] + ', ' + carColors[4] + ', and ' + carColors[5] + '.');
 
 if (numCorrect == 3) { // The user only gets a point for correctly guessing 3 car colors
+  alert('Great job!');
   totalCorrect++;
 }
 
@@ -150,9 +157,9 @@ console.log('totalCorrect =', totalCorrect);
 
 alert('You answered ' + totalCorrect + ' questions correctly.');
 
-if (totalCorrect >= 4) {
+if (totalCorrect >= 6) {
   alert('You really know me!');
-} else if (totalCorrect === 3) {
+} else if (totalCorrect > 3) {
   alert('Not too bad.');
 } else {
   alert('You don\'t know me very well, do you?');
