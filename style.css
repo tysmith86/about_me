@@ -2,9 +2,18 @@ header {
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  background-color: #423e71;
+  background-color: #1374be;
   border: 10px outset #568370;
   font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  font-size: 1.2em;
 }
 
 section {
@@ -12,7 +21,7 @@ section {
   height: 50%;
   margin: 5px auto;
   text-align: center;
-  background-color: #423e71;
+  background-color: #1374be;
   border: 10px outset #568370;
   font-size: 1.5em;
 }
