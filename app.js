@@ -164,9 +164,8 @@ function carColorsQA(){
     }
   } while (guesses > 1 && numCorrect != 3);
 
-  alert('The correct answers are ' + carColors[0] + ', ' + carColors[1] + ', ' + carColors[3] + ', ' + carColors[4] + ', and ' + carColors[5] + '.');
   if (numCorrect == 3) { // The user only gets a point for correctly guessing 3 car colors
-    alert('Great job!');
+    alert('Great job! The correct answers are ' + carColors[0] + ', ' + carColors[1] + ', ' + carColors[3] + ', ' + carColors[4] + ', and ' + carColors[5] + '.');
     totalCorrect++;
   }
 }
@@ -174,7 +173,7 @@ carColorsQA();
 
 console.log('totalCorrect =', totalCorrect);
 
-alert('You answered ' + totalCorrect + ' questions correctly.');
+// alert('You answered ' + totalCorrect + ' questions correctly.');
 
 function randomNum() {
   var randomNum = Math.floor(Math.random() * 11);
@@ -185,16 +184,16 @@ function randomNum() {
   if (userGuess == randomNum) {
     alert('Congratulations...for randomly guessing an arbitrary number.');
   } else {
-    alert('Is that your final answer? Just kidding, you only get 1 guess...WRONG!.');
+    alert('Is that your final answer? Just kidding, you only get one guess! The correct number was ' + randomNum + '.');
   }
 }
 
 
 if (totalCorrect >= 6) {
-  alert('You really know me! BONUS ROUND!');
+  alert('You answered ' + totalCorrect + ' questions correctly. You really know me! BONUS ROUND!');
   randomNum();
 } else if (totalCorrect > 3) {
-  alert('Not too bad.');
+  alert('You answered ' + totalCorrect + ' questions correctly. Not too bad.');
 } else {
-  alert('You don\'t know me very well, do you?');
+  alert('You answered ' + totalCorrect + ' questions correctly. You don\'t know me very well, do you?');
 };
