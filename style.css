@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  width: 55%;
+  width: 1050px;
   margin: 0 auto;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.4);
@@ -22,11 +22,11 @@ a {
 
 a:hover {
   font-size: 1.2em;
+  font-style: italic;
 }
 
 section {
-  width: 55%;
-  height: 50%;
+  width: 1050px;
   margin: 5px auto;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.4);
@@ -35,13 +35,28 @@ section {
 }
 
 h2 {
-  margin: 15px auto;
+  margin: 10px auto 15px auto;
   text-decoration: underline;
 }
 
 p {
   margin-top: 5px;
   padding: 0 20px;
+}
+
+#note{
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+#quiz {
+  width: 150px;
+  height: ;
+  margin: auto;
+  text-align: center;
+  border: 2px solid black;
+
 }
 
 ol {

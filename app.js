@@ -8,6 +8,7 @@ console.log('The user\'s name is ', userName);
 var isReady = prompt('Welcome ' + userName + ', are you ready to take the quiz?').toLowerCase();
 console.log('Is the user ready?', isReady.toUpperCase());
 
+//Is the user ready?
 if (isReady === 'yes' || isReady === 'y') {
   alert('Good luck!');
 } else if (isReady === 'no' || isReady === 'n') {
@@ -19,6 +20,7 @@ function videoGameQA() {
   var videoGameQA = prompt('Do I play video games?').toLowerCase();
   console.log('videoGameQA =', videoGameQA);
 
+//Video game question
   if (videoGameQA === 'yes' || videoGameQA === 'y') {
     console.log('The user answered this correctly.');
     alert('You are right!');
@@ -32,6 +34,8 @@ function videoGameQA() {
   }
 }
 videoGameQA();
+
+//Favorite color question
 function favoriteColorQA() {
   var favoriteColorQA = prompt('Is my favorite color red?').toLowerCase();
   console.log('favoriteColorQA =', favoriteColorQA);
@@ -50,6 +54,7 @@ function favoriteColorQA() {
 }
 favoriteColorQA();
 
+//Coding question
 function codingQA() {
   var codingQA = prompt('Do I like to code?').toLowerCase();
   console.log('codingQA =', codingQA);
@@ -68,6 +73,7 @@ function codingQA() {
 }
 codingQA();
 
+//Football question
 function footballQA() {
   var footballQA = prompt('Do I like football?').toLowerCase();
   console.log('footballQA =', footballQA);
@@ -86,6 +92,7 @@ function footballQA() {
 }
 footballQA();
 
+//Windows question
 function windowsQA() {
   var windowsQA = prompt('Am I coding on Windows?').toLowerCase();
   console.log('windowsQA =', windowsQA);
@@ -104,7 +111,7 @@ function windowsQA() {
 }
 windowsQA();
 
-
+//Siblings question
 function numSiblingsQA() {
   var numSiblings = 3;
   for (var i = 4; i >= 1 && siblingsQA != numSiblings; i--) {
@@ -123,11 +130,10 @@ function numSiblingsQA() {
 }
 numSiblingsQA();
 
-function carColorsQA(){
-
+//Car color question
+function carColorsQA() {
   var carColors = ['red', 'green', 'gray', 'grey', 'silver', 'blue'];
   var possibleAnswers = carColors.length - 1; // subtracted 1 due to giving two spellings of grey
-
   var guesses = 7;
   var numCorrect = 0;
 
@@ -135,27 +141,27 @@ function carColorsQA(){
     guesses--;
     var carColorsQA = prompt('Of all the vehicles I owned, name 3 of their colors. There are ' + possibleAnswers + ' possible answers. You have ' + guesses + ' guesses.').toLowerCase();
     console.log('carColorsQA = ', carColorsQA);
-    if (carColorsQA == carColors[0]) {
+    if (carColorsQA === carColors[0]) {
       numCorrect++;
       console.log('numCorrect = ', numCorrect);
       alert('My first vehicle was a red Toyota Pickup!');
-    } else if (carColorsQA == carColors[1]) {
+    } else if (carColorsQA === carColors[1]) {
       numCorrect++;
       console.log('numCorrect = ', numCorrect);
       alert('I used to own a green Dodge Dakota.');
-    } else if (carColorsQA == carColors[2]) {
+    } else if (carColorsQA === carColors[2]) {
       numCorrect++;
       console.log('numCorrect = ', numCorrect);
       alert('One of the favorite cars I used to own was a grey Mustang GT!');
-    } else if (carColorsQA == carColors[3]) {
+    } else if (carColorsQA === carColors[3]) {
       numCorrect++;
       console.log('numCorrect = ', numCorrect);
       alert('One of the favorite cars I used to own was a grey Mustang GT!');
-    } else if (carColorsQA == carColors[4]) {
+    } else if (carColorsQA === carColors[4]) {
       numCorrect++;
       console.log('numCorrect = ', numCorrect);
       alert('The last car I owned was a silver Honda Civic.');
-    } else if (carColorsQA == carColors[5]) {
+    } else if (carColorsQA === carColors[5]) {
       numCorrect++;
       console.log('numCorrect = ', numCorrect);
       alert('I currently own a blue Honda Civic.');
@@ -164,7 +170,7 @@ function carColorsQA(){
     }
   } while (guesses > 1 && numCorrect != 3);
 
-  if (numCorrect == 3) { // The user only gets a point for correctly guessing 3 car colors
+  if (numCorrect === 3) { // The user only gets a point for correctly guessing 3 car colors
     alert('Great job! The correct answers are ' + carColors[0] + ', ' + carColors[1] + ', ' + carColors[3] + ', ' + carColors[4] + ', and ' + carColors[5] + '.');
     totalCorrect++;
   }
@@ -173,8 +179,7 @@ carColorsQA();
 
 console.log('totalCorrect =', totalCorrect);
 
-// alert('You answered ' + totalCorrect + ' questions correctly.');
-
+//Random number game
 function randomNum() {
   var randomNum = Math.floor(Math.random() * 11);
   console.log('randomNum = ', randomNum);
