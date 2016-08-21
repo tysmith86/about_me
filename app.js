@@ -2,7 +2,6 @@
 
 var totalCorrect = 0; // Used for a running tally of correct answers
 
-
 var userName = prompt('What is your name?');
 console.log('The user\'s name is ', userName);
 
@@ -20,11 +19,11 @@ if (isReady === 'yes' || isReady === 'y') {
 } else {
   alert('Well, that doesn\'t answer the question, so we\'ll just go ahead and start.');
 }
+
+//Video game question
 function videoGameQA() {
   var videoGameQA = prompt('Do I play video games?').toLowerCase();
   console.log('videoGameQA =', videoGameQA);
-
-//Video game question
   if (videoGameQA === 'yes' || videoGameQA === 'y') {
     console.log('The user answered this correctly.');
     alert('You are right!');
@@ -45,7 +44,7 @@ function videoGameQA() {
     alert('What does that have to do with me playing video games??');
 
     var questionOne = document.getElementById('one');
-    questionOne.innerHTML = 'Your answer didn\'t make any sense.';
+    questionOne.innerHTML = 'You answered this question incorrectly.';
 
   }
 }
@@ -76,7 +75,7 @@ function favoriteColorQA() {
     alert('What kind of an answer is that?');
 
     var questionTwo = document.getElementById('two');
-    questionTwo.innerHTML = 'Your answer didn\'t make any sense.';
+    questionTwo.innerHTML = 'You answered this question incorrectly.';
 
   }
 }
@@ -107,7 +106,7 @@ function codingQA() {
     alert('Is that seriously your answer?');
 
     var questionThree = document.getElementById('three');
-    questionThree.innerHTML = 'Your answer didn\'t make any sense.';
+    questionThree.innerHTML = 'You answered this question incorrectly.';
 
   }
 }
@@ -138,7 +137,7 @@ function footballQA() {
     alert('A simple yes or no is all I\'m looking for here.');
 
     var questionFour = document.getElementById('four');
-    questionFour.innerHTML = 'Your answer didn\'t make any sense.'
+    questionFour.innerHTML = 'You answered this question incorrectly.'
 
   }
 }
@@ -169,7 +168,7 @@ function windowsQA() {
     alert('That doesn\'t really answer the question.');
 
     var questionFive = document.getElementById('five');
-    questionFive.innerHTML = 'Your answer didn\'t make any sense.';
+    questionFive.innerHTML = 'You answered this question incorrectly.';
 
   }
 }
@@ -183,13 +182,31 @@ function numSiblingsQA() {
     var siblingsQA = Number(prompt('How many siblings do I have? You have ' + i + ' guesses to get it right!'));
     console.log('SiblingsQA = ', siblingsQA);
     if (siblingsQA === numSiblings) {
-      totalCorrect++;
       console.log('The user answered correctly.');
       alert('That\'s right! I have two brothers and one sister.');
+
+      var questionSix = document.getElementById('six');
+      questionSix.innerHTML = 'You answered this question correctly!';
+
+      totalCorrect++;
     } else if (siblingsQA < numSiblings) {
       alert('Too low!');
+
+      var questionSix = document.getElementById('six');
+      questionSix.innerHTML = 'You answered this question incorrectly.';
+
     } else if (siblingsQA > numSiblings) {
       alert('Too high!');
+
+      var questionSix = document.getElementById('six');
+      questionSix.innerHTML = 'You answered this question incorrectly.';
+
+    } else {
+      alert('Not a number!');
+      console.log('Invalid response');
+
+      var questionSix = document.getElementById('six');
+      questionSix.innerHTML = 'You answered this question incorrectly.';
     }
   }
 }
@@ -237,7 +254,18 @@ function carColorsQA() {
 
   if (numCorrect === 3) { // The user only gets a point for correctly guessing 3 car colors
     alert('Great job! The correct answers are ' + carColors[0] + ', ' + carColors[1] + ', ' + carColors[3] + ', ' + carColors[4] + ', and ' + carColors[5] + '.');
+
+    var questionSeven = document.getElementById('seven');
+    questionSeven.innerHTML = 'You answered this question correctly!'
+
     totalCorrect++;
+  } else {
+    alert('The correct answers are ' + carColors[0] + ', ' + carColors[1] + ', ' + carColors[3] + ', ' + carColors[4] + ', and ' + carColors[5] + '.');
+    console.log('The user answered this incorrectly.')
+
+    var questionSeven = document.getElementById('seven');
+    questionSeven.innerHTML = 'You answered this question incorrectly.';
+
   }
 }
 carColorsQA();
@@ -266,4 +294,9 @@ if (totalCorrect >= 6) {
   alert('You answered ' + totalCorrect + ' questions correctly. Not too bad.');
 } else {
   alert('You answered ' + totalCorrect + ' questions correctly. You don\'t know me very well, do you?');
+};
+
+var answers = document.querySelectorAll('td.hidden');
+for (var i = 0; i < answers.length; i++) {
+  answers[i].className = 'visible';
 };
