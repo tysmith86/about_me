@@ -85,11 +85,7 @@ ol li {
   padding-bottom: 5px;
 }
 
-tr :first-child {
-  text-align: left;
-}
-
-.response {
+.left {
   text-align: left;
 }
 
