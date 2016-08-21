@@ -24,13 +24,25 @@ function videoGameQA() {
   if (videoGameQA === 'yes' || videoGameQA === 'y') {
     console.log('The user answered this correctly.');
     alert('You are right!');
+
+    var questionOne = document.getElementById('one');
+    questionOne.innerHTML = 'You answered this question correctly!';
+
     totalCorrect++;
   } else if (videoGameQA === 'no' || videoGameQA === 'n') {
     console.log('The user answered this incorrectly.');
     alert('Wrong, I love video games...maybe a little too much!');
+
+    var questionOne = document.getElementById('one');
+    questionOne.innerHTML = 'You answered this question incorrectly.';
+
   } else {
     console.log('Invalid response');
     alert('What does that have to do with me playing video games??');
+
+    var questionOne = document.getElementById('one');
+    questionOne.innerHTML = 'Your answer didn\'t make any sense.';
+
   }
 }
 videoGameQA();
@@ -43,13 +55,25 @@ function favoriteColorQA() {
   if (favoriteColorQA === 'no' || favoriteColorQA === 'n') {
     console.log('The user answered this correctly.');
     alert('Lucky guess. My favorite color is blue!');
+
+    var questionTwo = document.getElementById('two');
+    questionTwo.innerHTML = 'You answered this question correctly!';
+
     totalCorrect++;
   } else if (favoriteColorQA === 'yes' || favoriteColorQA === 'y') {
     console.log('The user answered this incorrectly.');
     alert('Nope, my favorite color is blue!');
+
+    var questionTwo = document.getElementById('two');
+    questionTwo.innerHTML = 'You answered this question incorrectly.';
+
   } else {
     console.log('Invalid response');
     alert('What kind of an answer is that?');
+
+    var questionTwo = document.getElementById('two');
+    questionTwo.innerHTML = 'Your answer didn\'t make any sense.';
+
   }
 }
 favoriteColorQA();
@@ -62,13 +86,25 @@ function codingQA() {
   if (codingQA === 'yes' || codingQA === 'y') {
     console.log('The user answered this correctly.');
     alert('I would congratulate you on getting this correct, but that should be pretty obvious.');
+
+    var questionThree = document.getElementById('three');
+    questionThree.innerHTML = 'You answered this question correctly!';
+
     totalCorrect++;
   } else if (codingQA === 'no' || codingQA === 'n') {
     console.log('The user answered this incorrectly.');
     alert('What a stupid answer, I\'m in a coding class!');
+
+    var questionThree = document.getElementById('three');
+    questionThree.innerHTML = 'You answered this question incorrectly.';
+
   } else {
     console.log('Invalid response');
     alert('Is that seriously your answer?');
+
+    var questionThree = document.getElementById('three');
+    questionThree.innerHTML = 'Your answer didn\'t make any sense.';
+
   }
 }
 codingQA();
@@ -81,13 +117,25 @@ function footballQA() {
   if (footballQA === 'yes' || footballQA === 'y') {
     console.log('The user answered this correctly.');
     alert('Football is one of my favorite sports. GO BRONCOS!');
+
+    var questionFour = document.getElementById('four');
+    questionFour.innerHTML = 'You answered this question correctly!';
+
     totalCorrect++;
   } else if (footballQA === 'no' || footballQA === 'n') {
     console.log('The user answered this incorrectly.');
     alert('I actually love football. GO BRONCOS!');
+
+    var questionFour = document.getElementById('four');
+    questionFour.innerHTML = 'You answered this question incorrectly.';
+
   } else {
     console.log('Invalid response');
     alert('A simple yes or no is all I\'m looking for here.');
+
+    var questionFour = document.getElementById('four');
+    questionFour.innerHTML = 'Your answer didn\'t make any sense.'
+
   }
 }
 footballQA();
@@ -100,13 +148,25 @@ function windowsQA() {
   if (windowsQA == 'no' || windowsQA === 'n') {
     console.log('The user answered this correctly.');
     alert('You got this one correct. I\'m using Linux!');
+
+    var questionFive = document.getElementById('five');
+    questionFive.innerHTML = 'You answered this question correctly!';
+
     totalCorrect++;
   } else if (windowsQA === 'yes' || windowsQA === 'y') {
     console.log('The user answered this incorrectly.');
     alert('Nope, I\'m using Linux!');
+
+    var questionFive = document.getElementById('five');
+    questionFive.innerHTML = 'You answered this question incorrectly.';
+
   } else {
     console.log('Invalid response');
     alert('That doesn\'t really answer the question.');
+
+    var questionFive = document.getElementById('five');
+    questionFive.innerHTML = 'Your answer didn\'t make any sense.';
+
   }
 }
 windowsQA();
