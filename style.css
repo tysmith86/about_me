@@ -84,3 +84,19 @@ ol {
 ol li {
   padding-bottom: 5px;
 }
+
+tr :first-child {
+  text-align: left;
+}
+
+.response {
+  text-align: left;
+}
+
+table {
+  margin: auto;
+}
+
+table :nth-child(2) :nth-child(2) {
+  width: 200px;
+}

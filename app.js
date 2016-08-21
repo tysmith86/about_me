@@ -2,8 +2,12 @@
 
 var totalCorrect = 0; // Used for a running tally of correct answers
 
+
 var userName = prompt('What is your name?');
 console.log('The user\'s name is ', userName);
+
+var results = document.getElementById('results');
+results.innerHTML = userName + '\'s Results:';
 
 var isReady = prompt('Welcome ' + userName + ', are you ready to take the quiz?').toLowerCase();
 console.log('Is the user ready?', isReady.toUpperCase());
@@ -170,6 +174,7 @@ function windowsQA() {
   }
 }
 windowsQA();
+
 
 //Siblings question
 function numSiblingsQA() {
