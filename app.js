@@ -39,14 +39,14 @@ function videoGameQA() {
     console.log('The user answered this incorrectly.');
     alert('Wrong, I love video games...maybe a little too much!');
 
-    var questionOne = document.getElementById('one');
+    questionOne = document.getElementById('one');
     questionOne.innerHTML = 'You answered this question incorrectly.';
 
   } else {
     console.log('Invalid response');
     alert('What does that have to do with me playing video games??');
 
-    var questionOne = document.getElementById('one');
+    questionOne = document.getElementById('one');
     questionOne.innerHTML = 'You answered this question incorrectly.';
 
   }
@@ -70,14 +70,14 @@ function favoriteColorQA() {
     console.log('The user answered this incorrectly.');
     alert('Nope, my favorite color is blue!');
 
-    var questionTwo = document.getElementById('two');
+    questionTwo = document.getElementById('two');
     questionTwo.innerHTML = 'You answered this question incorrectly.';
 
   } else {
     console.log('Invalid response');
     alert('What kind of an answer is that?');
 
-    var questionTwo = document.getElementById('two');
+    questionTwo = document.getElementById('two');
     questionTwo.innerHTML = 'You answered this question incorrectly.';
 
   }
@@ -101,14 +101,14 @@ function codingQA() {
     console.log('The user answered this incorrectly.');
     alert('What a stupid answer, I\'m in a coding class!');
 
-    var questionThree = document.getElementById('three');
+    questionThree = document.getElementById('three');
     questionThree.innerHTML = 'You answered this question incorrectly.';
 
   } else {
     console.log('Invalid response');
     alert('Is that seriously your answer?');
 
-    var questionThree = document.getElementById('three');
+    questionThree = document.getElementById('three');
     questionThree.innerHTML = 'You answered this question incorrectly.';
 
   }
@@ -132,15 +132,15 @@ function footballQA() {
     console.log('The user answered this incorrectly.');
     alert('I actually love football. GO BRONCOS!');
 
-    var questionFour = document.getElementById('four');
+    questionFour = document.getElementById('four');
     questionFour.innerHTML = 'You answered this question incorrectly.';
 
   } else {
     console.log('Invalid response');
     alert('A simple yes or no is all I\'m looking for here.');
 
-    var questionFour = document.getElementById('four');
-    questionFour.innerHTML = 'You answered this question incorrectly.'
+    questionFour = document.getElementById('four');
+    questionFour.innerHTML = 'You answered this question incorrectly.';
 
   }
 }
@@ -163,14 +163,14 @@ function windowsQA() {
     console.log('The user answered this incorrectly.');
     alert('Nope, I\'m using Linux!');
 
-    var questionFive = document.getElementById('five');
+    questionFive = document.getElementById('five');
     questionFive.innerHTML = 'You answered this question incorrectly.';
 
   } else {
     console.log('Invalid response');
     alert('That doesn\'t really answer the question.');
 
-    var questionFive = document.getElementById('five');
+    questionFive = document.getElementById('five');
     questionFive.innerHTML = 'You answered this question incorrectly.';
 
   }
@@ -195,20 +195,20 @@ function numSiblingsQA() {
     } else if (siblingsQA < correctAnswers[5]) {
       alert('Too low!');
 
-      var questionSix = document.getElementById('six');
+      questionSix = document.getElementById('six');
       questionSix.innerHTML = 'You answered this question incorrectly.';
 
     } else if (siblingsQA > correctAnswers[5]) {
       alert('Too high!');
 
-      var questionSix = document.getElementById('six');
+      questionSix = document.getElementById('six');
       questionSix.innerHTML = 'You answered this question incorrectly.';
 
     } else {
       alert('Not a number!');
       console.log('Invalid response');
 
-      var questionSix = document.getElementById('six');
+      questionSix = document.getElementById('six');
       questionSix.innerHTML = 'You answered this question incorrectly.';
     }
   }
@@ -255,14 +255,14 @@ function carColorsQA() {
     alert('Great job! The correct answers are ' + correctAnswers[6][0] + ', ' + correctAnswers[6][1] + ', ' + correctAnswers[6][3] + ', ' + correctAnswers[6][4] + ', and ' + correctAnswers[6][5] + '.');
 
     var questionSeven = document.getElementById('seven');
-    questionSeven.innerHTML = 'You answered this question correctly!'
+    questionSeven.innerHTML = 'You answered this question correctly!';
 
     totalCorrect++;
   } else {
     alert('The correct answers are ' + correctAnswers[6][0] + ', ' + correctAnswers[6][1] + ', ' + correctAnswers[6][3] + ', ' + correctAnswers[6][4] + ', and ' + correctAnswers[6][5] + '.');
-    console.log('The user answered this incorrectly.')
+    console.log('The user answered this incorrectly.');
 
-    var questionSeven = document.getElementById('seven');
+    questionSeven = document.getElementById('seven');
     questionSeven.innerHTML = 'You answered this question incorrectly.';
   }
 }
